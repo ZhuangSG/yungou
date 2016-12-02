@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>云购</title>
+		<!--<link rel="stylesheet" href="css/bootstrap.css" />-->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			#case {
+				width: 700px;
+				height: 100%;
+				margin: 0 auto;
+			}
+			
+			#top {
+				width: 700px;
+				height: 50px;
+				background: #f2473d;
+				margin: 0 auto;
+				text-align: center;
+				line-height: 50px;
+				color: #fff;
+				font-size: 18px;
+			}
+			
+			#pic {
+				width: 700px;
+				height: 70px;
+			}
+			
+			#pic li {
+				width: 140px;
+				height: 70px;
+				float: left;
+				text-align: center;
+				font-size: 12px;
+				padding-top: 10px;
+			}
+			
+			#pic li a {
+				color: #666;
+				text-decoration: none;
+			}
+			
+			#pic li img {
+				width: 35px;
+				height: 35px;
+			}
+			
+			#horn {
+				width: 700px;
+				height: 45px;
+				position: relative;
+			}
+			
+			.horn_left {
+				width: 30px;
+				height: 45px;
+				position: absolute;
+				top: 10px;
+				left: 5px;
+				background: url(img/notice.png) no-repeat;
+				background-size: 24px;
+			}
+			
+			.word {
+				width: 600px;
+				height: 35px;
+				position: absolute;
+				top: 5px;
+				left: 35px;
+				line-height: 35px;
+				color: #444;
+				font-size: 12px;
+				overflow: hidden;
+				cursor: pointer;
+			}
+			
+			.word ul {
+				position: absolute;
+			}
+			
+			.word li {
+				width: 600px;
+				height: 35px;
+			}
+			
+			#header {
+				width: 700px;
+				height: 50px;
+				border-bottom: 1px solid #ccc;
+				border-top: 1px solid #ccc;
+			}
+			
+			#header .header1 {
+				width: 50px;
+				height: 43px;
+				line-height: 50px;
+				text-align: center;
+				float: left;
+				margin-left: 100px;
+				font-size: 14px;
+			}
+			
+			#header .header1 a {
+				width: 50px;
+				height: 43px;
+				display: block;
+				color: #333;
+				text-decoration: none;
+			}
+			
+			.main {
+				width: 710px;
+				height: 635px;
+				display: none;
+			}
+			
+			#main_left {
+				width: 349px;
+				height: 585px;
+				border-right: 1px solid #ccc;
+				float: left;
+			}
+			
+			#main_left .mainone {
+				width: 349px;
+				height: 189px;
+				text-align: center;
+				border-bottom: 1px solid #ccc;
+				line-height: 25px;
+				padding-top: 5px;
+			}
+			
+			#main_left .mainone img {
+				width: 100px;
+				height: 120px;
+			}
+			
+			#main_left .mainone a {
+				color: #333;
+				text-decoration: none;
+				font-size: 14px;
+			}
+			
+			#main_left .mainone p {
+				width: 320px;
+				height: 22px;
+				display: block;
+				overflow: hidden;
+				line-height: 22px;
+				text-align: left;
+				margin-left: 5px;
+			}
+			
+			#main_left .mainone .progress {
+				width: 280px;
+				height: 28px;
+				text-align: left;
+				color: #333;
+				font-size: 12px;
+				margin-left: 5px;
+			}
+			
+			#main_left .mainone .progressbar {
+				width: 200px;
+				height: 30px;
+				float: left;
+			}
+			
+			#main_left .mainone .pro {
+				width: 180px;
+				height: 8px;
+				background: #ccc;
+				border-radius: 10px;
+			}
+			
+			#main_left .mainone .progressright {
+				width: 60px;
+				height: 20px;
+				border: 1px solid red;
+				float: right;
+				text-align: center;
+				line-height: 20px;
+				color: red;
+				border-radius: 5px;
+				margin-top: 5px;
+				cursor: pointer;
+			}
+			
+			#main_right {
+				width: 350px;
+				height: 585px;
+				float: left;
+			}
+			
+			#main_right .mainone {
+				width: 350px;
+				height: 189px;
+				text-align: center;
+				border-bottom: 1px solid #ccc;
+				line-height: 25px;
+				padding-top: 5px;
+			}
+			
+			#main_right .mainone img {
+				width: 100px;
+				height: 120px;
+			}
+			
+			#main_right .mainone a {
+				color: #333;
+				text-decoration: none;
+				font-size: 14px;
+			}
+			
+			#main_right .mainone p {
+				width: 320px;
+				height: 22px;
+				display: block;
+				overflow: hidden;
+				line-height: 22px;
+				text-align: left;
+				margin-left: 5px;
+			}
+			
+			#main_right .mainone .progress {
+				width: 280px;
+				height: 28px;
+				text-align: left;
+				color: #333;
+				font-size: 12px;
+				margin-left: 5px;
+			}
+			
+			#main_right .mainone .progressbar {
+				width: 200px;
+				height: 30px;
+				float: left;
+			}
+			
+			#main_right .mainone .pro {
+				width: 180px;
+				height: 8px;
+				background: #ccc;
+				border-radius: 10px;
+			}
+			
+			#main_right .mainone .progressright {
+				width: 60px;
+				height: 20px;
+				border: 1px solid red;
+				float: right;
+				text-align: center;
+				line-height: 20px;
+				color: red;
+				border-radius: 5px;
+				margin-top: 5px;
+				cursor: pointer;
+			}
+			
+			.main .spanNoMessage {
+				width: 710px;
+				height: 100px;
+				display: block;
+				text-align: center;
+				line-height: 100px;
+				font-size: 14px;
+				color: #666;
+			}
+			
+			#foot {
+				width: 700px;
+				height: 50px;
+				position: fixed;
+				bottom: 0;
+				border-top: 1px solid #ccc;
+				background: #fff;
+			}
+			
+			#foot .ul1 {
+				position: absolute;
+			}
+			
+			#foot .ul1 li {
+				width: 175px;
+				height: 45px;
+				text-align: center;
+				padding-top: 5px;
+				float: left;
+				font-size: 14px;
+			}
+			
+			#foot .ul1 li a {
+				width: 175px;
+				height: 45px;
+				display: block;
+				text-decoration: none;
+				color: #666;
+			}
+			
+			#foot .ul1 li img {
+				width: 22px;
+				height: 22px;
+			}
+			
+			#foot .ul1 .pict {
+				display: none;
+				position: absolute;
+			}
+			/*@media only screen and (max-width:700px) {
+				#case {
+					width: 100%;
+					height: 1000px;
+				}
+				#top {
+					width: 100%;
+					height: 50px;
+				}
+				#pic {
+					width: 100%;
+					height: 70px;
+				}
+				#pic li {
+					width: 20%;
+					height: 70px;
+				}
+				#horn {
+					width: 100%;
+					height: 45px;
+				}
+				.horn_left {
+					width: 100%;
+					height: 45px;
+				}
+				.word {
+					width: 100%;
+					height: 35px;
+				}
+				.word li {
+					width: 100%;
+					height: 35px;
+				}
+				#header {
+					width: 100%;
+					height: 50px;
+				}
+				#header .header1 {
+					width: 10%;
+					height: 43px;
+					float: left;
+				    margin-left: 12%;				    
+				}
+				#header .header1 a {
+					width: 100%;
+					height: 43px;
+					display: block;
+				    color: #333;
+				    text-decoration: none;
+				}
+				#main{
+					width:100%;
+					height:600px;
+				}
+				#main_left {
+					width: 50%;
+					height: 600px;
+					float: none;
+				}
+				#main_left .mainone {
+					width: 100%;
+					height: 200px;
+				}
+				#main_left .mainone img {
+					width: 30%;
+					height: 120px;
+				}				
+				#main_left .mainone .progress {
+					width: 80%;
+					height: 28px;					
+				}
+				#main_left .mainone .progressbar {
+					width: 75%;
+					height: 30px;
+					
+				}
+				#main_left .mainone .pro {
+					width: 85%;
+					height: 8px;					
+				}
+				#main_left .mainone .progressright {
+					width: 20%;
+					height: 20px;	
+							
+				}
+				#main_right {
+					width: 50%;
+					height: 600px;
+					float: none;
+				}
+				#main_right .mainone {
+					width: 100%;
+					height: 200px;
+				}
+				#main_right .mainone img {
+					width: 30%;
+					height: 120px;
+				}				
+				#main_right .mainone .progress {
+					width: 80%;
+					height: 28px;					
+				}
+				#main_right .mainone .progressbar {
+					width: 75%;
+					height: 30px;
+					
+				}
+				#main_right .mainone .pro {
+					width: 85%;
+					height: 8px;					
+				}
+				#main_right .mainone .progressright {
+					width: 20%;
+					height: 20px;	
+							
+				}
+			}*/
+		</style>
+	</head>
+
+	<body>
+		<div id="case">
+			<div id="top">
+				<span>云购</span>
+			</div>
+			<div id="pic">
+				<ul>
+					<li>
+						<a href="#"><img src="img/1.png">
+							<p>分类</p>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img src="img/2.png">
+							<p>云购</p>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img src="img/3.png">
+							<p>晒单</p>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img src="img/4.png">
+							<p>新人帮助</p>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img src="img/5.png">
+							<p>签到</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="horn">
+				<div class="horn_left"></div>
+				<div class="word">
+					<ul id="ul1">
+						<li>恭喜***获得土豪金iphone 6s 一个</li>
+						<li>恭喜***获得大疆无人机一架(航拍神器)</li>
+						<li>恭喜***获得索尼(SONY)【国行PS】PlayStation VR 虚拟现实头戴设备摄像头套装</li>
+						<li>恭喜***获得凯迪拉克 XT5 2016款 25T 豪华型</li>
+						<li>恭喜***获得MacBook Pro【13寸/128G】</li>
+					</ul>
+				</div>
+			</div>
+			<div id="header">
+				<div class="header1">
+					<a style="color:red;border-bottom:2px solid red;" href="#">人气</a>
+				</div>
+				<div class="header1">
+					<a href="#">最新</a>
+				</div>
+				<div class="header1">
+					<a href="#">扫单</a>
+				</div>
+				<div class="header1">
+					<a href="#">推荐</a>
+				</div>
+			</div>
+			<div class="main" style="display:block;">
+				<div id="main_left">
+					<div class="mainone">
+						<a href="#"><img src="img/11.jpg">
+							<p>IPhone 6s Plus 16G 【金色,玫瑰金,银色,...</p>
+						</a>
+						<div class="progress">
+							<div class="progressbar">
+								开奖进度3%
+								<div class="pro"></div>
+							</div>
+							<div class="progressright">立即购买</div>
+						</div>
+					</div>
+					<div class="mainone">
+						<a href="#"><img src="img/22.jpg">
+							<p>索尼（SONY）【国行PS】PlayStation VR 虚拟现实头戴设备 摄像头套装</p>
+						</a>
+						<div class="progress">
+							<div class="progressbar">
+								开奖进度3%
+								<div class="pro"></div>
+							</div>
+							<div class="progressright">立即购买</div>
+						</div>
+					</div>
+					<div class="mainone">
+						<a href="#"><img src="img/33.jpg">
+							<p>凯迪拉克 XT5 2016款 25T 豪华型</p>
+						</a>
+						<div class="progress">
+							<div class="progressbar">
+								开奖进度3%
+								<div class="pro"></div>
+							</div>
+							<div class="progressright">立即购买</div>
+						</div>
+					</div>
+				</div>
+				<div id="main_right">
+					<div class="mainone">
+						<a href="#"><img src="img/4.jpg">
+							<p>macBook Pro【13寸/128G】</p>
+						</a>
+						<div class="progress">
+							<div class="progressbar">
+								开奖进度3%
+								<div class="pro"></div>
+							</div>
+							<div class="progressright">立即购买</div>
+						</div>
+					</div>
+					<div class="mainone">
+						<a href="#"><img src="img/5.jpg">
+							<p>Apple MacBook Pro 15.4英寸笔记本电脑(15.4/2.2GHZ/16GB/256GB-CHN)</p>
+						</a>
+						<div class="progress">
+							<div class="progressbar">
+								开奖进度3%
+								<div class="pro"></div>
+							</div>
+							<div class="progressright">立即购买</div>
+						</div>
+					</div>
+					<div class="mainone">
+						<a href="#"><img src="img/6.jpg">
+							<p>Logitech 罗技 无线蓝牙键盘多设备连接 K780</p>
+						</a>
+						<div class="progress">
+							<div class="progressbar">
+								开奖进度3%
+								<div class="pro"></div>
+							</div>
+							<div class="progressright">立即购买</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main">
+				<div id="main_left">
+					<div class="mainone">
+						<a href="#"><img style="width:120px;height:120px" src="img/watch.png">
+							<p>Motorola/摩托罗拉 MOTO 360二代智能手表 男款 银色42mm国际版</p>
+						</a>
+						<div class="progress">
+							<div class="progressbar">
+								开奖进度3%
+								<div class="pro"></div>
+							</div>
+							<div class="progressright">立即购买</div>
+						</div>
+					</div>
+					<div class="mainone">
+						<a href="#"><img style="width:120px;height:120px" src="img/nai.jpg">
+							<p>菲诗小铺每日草本芦荟泡沫洁面膏170g</p>
+						</a>
+						<div class="progress">
+							<div class="progressbar">
+								开奖进度3%
+								<div class="pro"></div>
+							</div>
+							<div class="progressright">立即购买</div>
+						</div>
+					</div>
+					<div class="mainone">
+						<a href="#"><img style="width:120px;height:120px" src="img/zhuji.jpg">
+							<p>new3DS 3DSLL 主机 新款3dsll/3ds 白色</p>
+						</a>
+						<div class="progress">
+							<div class="progressbar">
+								开奖进度3%
+								<div class="pro"></div>
+							</div>
+							<div class="progressright">立即购买</div>
+						</div>
+					</div>
+				</div>
+				<div id="main_right">
+					<div class="mainone">
+						<a href="#"><img style="width:120px;height:120px" src="img/xiaomi.jpg">
+							<p>Xiaomi/小米 红米Note3 高配版双卡双待金属指纹解锁智能手机【颜色随机】</p>
+						</a>
+						<div class="progress">
+							<div class="progressbar">
+								开奖进度3%
+								<div class="pro"></div>
+							</div>
+							<div class="progressright">立即购买</div>
+						</div>
+					</div>
+					<div class="mainone">
+						<a href="#"><img style="width:120px;height:120px" src="img/bus.jpg">
+							<p>小米旗舰店正品 Ninebot九号平衡车智能双轮体感代步车两轮平衡车【颜色随机】</p>
+						</a>
+						<div class="progress">
+							<div class="progressbar">
+								开奖进度3%
+								<div class="pro"></div>
+							</div>
+							<div class="progressright">立即购买</div>
+						</div>
+					</div>
+					<div class="mainone">
+						<a href="#"><img style="width:120px;height:120px" src="img/touying.jpg">
+							<p>BenQ 明基 W1110投影机 全高清1080P蓝光3D家用投影仪</p>
+						</a>
+						<div class="progress">
+							<div class="progressbar">
+								开奖进度3%
+								<div class="pro"></div>
+							</div>
+							<div class="progressright">立即购买</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main">
+				<span class="spanNoMessage">暂无信息</span>
+			</div>
+			<div class="main">
+				<div id="main_left">
+					<div class="mainone">
+						<a href="#"><img style="width:120px;height:120px;" src="img/watch.png">
+							<p>IPhone 6s Plus 16G 【金色,玫瑰金,银色,...</p>
+						</a>
+						<div class="progress">
+							<div class="progressbar">
+								开奖进度3%
+								<div class="pro"></div>
+							</div>
+							<div class="progressright">立即购买</div>
+						</div>
+					</div>
+					<div class="mainone">
+						<a href="#"><img style="width:120px;height:120px" src="img/zhuji.jpg">
+							<p>索尼（SONY）【国行PS】PlayStation VR 虚拟现实头戴设备 摄像头套装</p>
+						</a>
+						<div class="progress">
+							<div class="progressbar">
+								开奖进度3%
+								<div class="pro"></div>
+							</div>
+							<div class="progressright">立即购买</div>
+						</div>
+					</div>
+					<div class="mainone">
+						<a href="#"><img style="width:120px;height:120px" src="img/touying.jpg">
+							<p>凯迪拉克 XT5 2016款 25T 豪华型</p>
+						</a>
+						<div class="progress">
+							<div class="progressbar">
+								开奖进度3%
+								<div class="pro"></div>
+							</div>
+							<div class="progressright">立即购买</div>
+						</div>
+					</div>
+				</div>
+				<div id="main_right">
+					<div class="mainone">
+						<a href="#"><img style="width:120px;height:120px" src="img/xiaomi.jpg">
+							<p>macBook Pro【13寸/128G】</p>
+						</a>
+						<div class="progress">
+							<div class="progressbar">
+								开奖进度3%
+								<div class="pro"></div>
+							</div>
+							<div class="progressright">立即购买</div>
+						</div>
+					</div>
+					<div class="mainone">
+						<a href="#"><img style="width:120px;height:120px" src="img/touying.jpg">
+							<p>Apple MacBook Pro 15.4英寸笔记本电脑(15.4/2.2GHZ/16GB/256GB-CHN)</p>
+						</a>
+						<div class="progress">
+							<div class="progressbar">
+								开奖进度3%
+								<div class="pro"></div>
+							</div>
+							<div class="progressright">立即购买</div>
+						</div>
+					</div>
+					<div class="mainone">
+						<a href="#"><img style="width:120px;height:120px" src="img/erji.jpg">
+							<p>Logitech 罗技 无线蓝牙键盘多设备连接 K780</p>
+						</a>
+						<div class="progress">
+							<div class="progressbar">
+								开奖进度3%
+								<div class="pro"></div>
+							</div>
+							<div class="progressright">立即购买</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="foot">
+				<ul class="ul1">
+					<li>
+						<a style="color:red" href="#"><img class="pictu" src="img/index1.png"><img style="display:block;position:absolute;top:5px;margin-left:76.5px;" class="pict" src="img/index-light.png">
+							<p>首页</p>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img class="pictu" src="img/index2.png"><img class="pict" src="img/upcoming-light.png">
+							<p>最新揭晓</p>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img class="pictu" src="img/index3.png"><img class="pict" src="img/find-light.png">
+							<p>发现</p>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img class="pictu" src="img/index4.png"><img class="pict" src="img/person-light.png">
+							<p>个人中心</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/js.js"></script>
+	</body>
+
+</html>
